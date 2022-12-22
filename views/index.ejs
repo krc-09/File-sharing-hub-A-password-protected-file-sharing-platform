@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body >
+    <% if (locals.fileLink !=null){
+        %>
+        <div style="margin-bottom:1rem;">Your file is uploaded
+            <a href="<%=locals.fileLink %>"><%=locals.fileLink %> </a></div>
+<% } %>
+    <form action="/upload"method="post"style="display:grid;gap: .5rem;grid-template-columns:auto 1fr;max-width:500px;margin:0 
+    auto;" enctype="multipart/form-data">
+   
+ 
+
+    <div class="first"style="background-color: rgb(203, 162, 229);padding-top: 210px; height:400px;width: 600px;
+    border:solid 2px black;padding-left:70px ">
+        <h1 style="color: rgb(76, 76, 83);padding-left:90px ;text-decoration: underline;">FILE SHARING APP</h1>
+        <div style="padding-top: 75px;padding-left: 90px ;">
+
+        <label for="file" >File</label>
+        <input type="file" id="file" name="file" required/>
+        </div>
+
+        <div style="padding-top: 45px;padding-left: 90px ;">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" />
+        <div style="padding-top: 30px;padding-left: 1px ;">
+        <button style ="grid-column:span 2;width: 300px;"type="submit">Share</button>
+        </div>
+    </div>
+        </form>
+    </div>
+
+</body>
+</html>
